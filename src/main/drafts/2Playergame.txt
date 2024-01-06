@@ -1,0 +1,60 @@
+
+2 Player game
+
+
+King extends Piece
+  color
+  canMove()
+
+
+Box
+	Piece
+	Position x and y
+
+
+Board
+	List<Piece>
+
+Position{
+    int x;
+    int y
+}
+
+Player{
+    color
+    nextMove(Box currentPosition, Box targetBox ){
+        if(currentBox.Piece.color ==this.color){
+            if(currentBox.Position.canMove(targetBox.Position)){
+                currentBox.Position = targetBox.Position;
+                targetBox.Piece.isAlive = false;
+            }
+        }
+        else{
+            throw new Exception("Move not allowed");
+        }
+    }
+
+}
+
+ChessGame(){
+Player p1;
+Player p2;
+
+p1.move()
+
+}
+
+
+
+King extends Piece {
+    isAlive
+    canMove(Position currentPosition, Position nextPosition){
+            if(currentBox.i-nextBox.i>0){
+                return false;
+            }
+            else{
+                return true;
+            }
+    }
+}
+
